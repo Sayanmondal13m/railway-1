@@ -58,7 +58,7 @@ app.post("/track", async (req, res) => {
 setInterval(async () => {
     await Visitor.create({ userId: null, fake: true });
     broadcastVisitorCount();
-}, 60 * 1000);
+}, 60 * 60 * 1000);
 
 // Function to broadcast visitor count
 const broadcastVisitorCount = async () => {
